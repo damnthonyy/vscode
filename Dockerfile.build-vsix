@@ -2,7 +2,7 @@ FROM node:24-slim
 
 WORKDIR /workspace
 
-COPY extensions/copilot/package.json extensions/copilot/package-lock.json ./
+COPY extensions/copilot/package.json extensions/copilot/package-lock.json extensions/copilot/.npmrc ./
 
 # Install without running scripts: postinstall.ts needs source files not yet present
 RUN --mount=type=cache,target=/root/.npm \
